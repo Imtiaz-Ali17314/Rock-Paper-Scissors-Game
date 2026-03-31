@@ -3,37 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Sissors Game</title>
+    <title>Rock Paper Scissors | Premium Edition</title>
+    <meta name="description" content="A modern, high-performance Rock Paper Scissors game featuring sleek UI and smooth animations. Play against the computer and track your score." />
+    <!-- Meta for SEO -->
+    <meta property="og:title" content="Rock Paper Scissors Premium" />
+    <meta property="og:description" content="Test your luck in this modern Rock Paper Scissors experience!" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Rock Paper Sissors</h1>
-    <div class="choices">
-      <div class="choice" id="rock">
-        <img src="images/rock.png" alt="Rock" />
-      </div>
-      <div class="choice" id="paper">
-        <img src="images/paper.png" alt="Paper" />
-      </div>
-      <div class="choice" id="scissors">
-        <img src="images/scissors.png" alt="Scissors" />
-      </div>
-    </div>
+    <main class="game-container">
+      <header>
+        <h1>Rock Paper Scissors</h1>
+      </header>
 
-    <div class="score-board">
-      <div class="score">
-        <p id="user-score">0</p>
-        <p>You</p>
+      <div class="choices" id="choices-container">
+        <div class="choice radial-glow" id="rock" title="Choose Rock" aria-label="Rock">
+          <img src="images/rock.png" alt="Rock" />
+        </div>
+        <div class="choice radial-glow" id="paper" title="Choose Paper" aria-label="Paper">
+          <img src="images/paper.png" alt="Paper" />
+        </div>
+        <div class="choice radial-glow" id="scissors" title="Choose Scissors" aria-label="Scissors">
+          <img src="images/scissors.png" alt="Scissors" />
+        </div>
       </div>
-      <div class="score">
-        <p id="comp-score">0</p>
-        <p>Comp</p>
-      </div>
-    </div>
 
-    <div class="msg-container">
-      <p id="msg">Play your move</p>
-    </div>
+      <section class="score-board">
+        <div class="score">
+          <div id="user-score">0</div>
+          <p>You</p>
+        </div>
+        <div class="score divider">
+          <div id="comp-score">0</div>
+          <p>Comp</p>
+        </div>
+      </section>
+
+      <section class="msg-section">
+        <p id="msg">Choose Your Move</p>
+        <button id="reset-btn" class="hidden">Restart Game</button>
+      </section>
+    </main>
+
+    <footer id="app-footer">
+      <p>Developed with ❤️ by <span>Imtiaz Ali</span> | 2026</p>
+    </footer>
+
     <script src="first.js"></script>
   </body>
 </html>
